@@ -2,6 +2,7 @@
 Library
 Logs
 UserSettings
+Temp
 .vscode
 
 # Ignore các file build và cấu hình cá nhân
