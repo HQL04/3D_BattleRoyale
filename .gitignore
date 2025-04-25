@@ -1,0 +1,13 @@
+# Ignore các thư mục cache và tạm thời
+Library
+Logs
+UserSettings
+.vscode
+
+# Ignore các file build và cấu hình cá nhân
+*.csproj
+*.sln
+*.vsconfig
+*.userprefs
+*.log
+*.unitypackage
