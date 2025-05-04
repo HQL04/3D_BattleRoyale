@@ -30,6 +30,7 @@ public class Soldier : MonoBehaviour
     public GameObject cam;
     float pitch = 0f;
     public bool webGLRightClickRotation = true;
+    private int _healthpoints;
 
     // 👇 THÊM DÒNG NÀY
     private Animator animator;
@@ -40,6 +41,7 @@ public class Soldier : MonoBehaviour
         {
             cam = transform.GetChild(0).gameObject;
         }
+        _healthpoints = 30;
     }
 
     void Start()
@@ -124,5 +126,18 @@ public class Soldier : MonoBehaviour
         {
             animator.SetTrigger("IsShooting");
         }
+    }
+
+    public bool TakeHit(int dame)
+    {
+        _healthpoints -= dame;
+        bool isDead = _healthpoints <= 0;
+        if (isDead) _Die();
+        return isDead;
+    }
+
+	private void _Die()
+    {
+        Destroy(gameObject);
     }
 }

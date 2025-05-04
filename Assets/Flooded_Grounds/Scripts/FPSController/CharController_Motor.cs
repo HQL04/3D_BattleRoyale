@@ -30,10 +30,13 @@ public class CharController_Motor : MonoBehaviour {
 	float pitch = 0f; 
 	public bool webGLRightClickRotation = true;
 
+	private int _healthpoints;
+
 	void Awake() {
         if (cam == null && transform.childCount > 0) {
             cam = transform.GetChild(0).gameObject;
         }
+		_healthpoints = 30;
     }
 
 	void Start(){
@@ -113,4 +116,16 @@ public class CharController_Motor : MonoBehaviour {
 		movement = transform.rotation * movement;
 		character.Move(movement * Time.deltaTime);
 	}
+	public bool TakeHit(int dame)
+    {
+        _healthpoints -= dame;
+        bool isDead = _healthpoints <= 0;
+        if (isDead) _Die();
+        return isDead;
+    }
+
+	private void _Die()
+    {
+        Destroy(gameObject);
+    }
 }
