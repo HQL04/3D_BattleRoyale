@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8dd62f0315d01409c006ca352ddfab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 10
   damage: 1
-  lifetime: 2
+  lifetime: 4.6
   impactEffectPrefab: {fileID: 2033386256786229412, guid: c68e2cc9629eb254ab57d7f742990672, type: 3}

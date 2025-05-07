@@ -36,7 +36,6 @@ public class CharController_Motor : MonoBehaviour {
         if (cam == null && transform.childCount > 0) {
             cam = transform.GetChild(0).gameObject;
         }
-
 		_healthpoints = 30;
     }
 
@@ -117,7 +116,6 @@ public class CharController_Motor : MonoBehaviour {
 		movement = transform.rotation * movement;
 		character.Move(movement * Time.deltaTime);
 	}
-
 	public bool TakeHit(int dame)
     {
         _healthpoints -= dame;

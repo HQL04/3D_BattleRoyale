@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using BehaviorTree;
 
-public class GuardBT : Tree
+public class GuardBT : BehaviorTree.Tree
 {
     public UnityEngine.Transform[] waypoints;
 
     public static float speed = 7f;
-    public static float fovRange = 6f;
-    public static float attackRange = 1f;
+    public static float fovRange = 15f;
+    public static float attackRange = 5f;
 
     protected override Node SetupTree()
     {

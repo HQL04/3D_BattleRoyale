@@ -8,10 +8,10 @@ public class RangedGuardBT : BehaviorTree.Tree
     public UnityEngine.Transform[] waypoints;
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
-    public float acquireRange = 30f;
-    public float loseRange    = 50f;  
-    public static float speed = 7f;
-    public static float rangedRange = 15f;
+    public float acquireRange = 60f;
+    public float loseRange    = 100f;  
+    public static float speed = 5f;
+    public static float rangedRange = 30f;
 
     protected override Node SetupTree()
     {

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 6f;
     public int damage = 1;
-    public float lifetime = 5f;
+    public float lifetime = 4.6f;
     public GameObject impactEffectPrefab; 
 
     void Start()
@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Đạn chạm Player");
-            var motor = other.GetComponent<CharController_Motor>();
+            var motor = other.GetComponent<Soldier>();
             if (motor != null)
             {
                 motor.TakeHit(damage);

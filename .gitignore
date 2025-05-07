@@ -4,6 +4,7 @@ Logs
 UserSettings
 Temp
 .vscode
+Sample
 
 # Ignore các file build và cấu hình cá nhân
 *.csproj
